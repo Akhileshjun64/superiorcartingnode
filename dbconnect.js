@@ -11,7 +11,7 @@ const connectDB = async () => {
       socketTimeoutMS: 30000, // 30 seconds
     });
 
-    // mongoose.set("strictQuery", false);
+    mongoose.set("strictQuery", false);
     console.log("Connected to MongoDB");
   } catch (error) {
     console.error("Error connecting to MongoDB:", error);
