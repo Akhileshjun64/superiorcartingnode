@@ -8,6 +8,7 @@ const connectDB = async () => {
     await mongoose.connect(`${process.env.MONGODB_URI_CLOUD}/post`);
 
     console.log("Connected to MongoDB");
+    mongoose.set("strictQuery", false); // Add this line
   } catch (error) {
     console.error("Error connecting to MongoDB:", error);
   }
